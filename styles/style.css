@@ -10,7 +10,7 @@
   background-color: #D9D9D9;
 }
 
-.card-img-top{
+.card.card-img-top{
   width: 300px; 
   height: 200px; 
   margin: 10px; 
