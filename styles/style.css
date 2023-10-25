@@ -19,6 +19,10 @@
  .nav-link:hover {
     color: #C10F19;
   }
+  .navbar-brand{
+    width: 18rem;
+    height: 9rem;
+  }
   .icon-nav {
     margin-right: 1rem;
   }
@@ -32,6 +36,9 @@
   .card-title{
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
+    opacity: 0;
+    animation: slideRigth 1s ease forwards;
+    animation-delay: .7s;
   }
 .dev-picture{
   width: 18rem;
@@ -120,4 +127,5 @@ img.btn-whatsapp {
     margin-right: 15rem;
     margin-left: 15rem;
   }
- }
+ };
+ 
