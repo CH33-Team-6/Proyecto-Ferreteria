@@ -1,0 +1,116 @@
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap');
+
+*     {
+        margin: 0;
+        padding: 0;
+      }
+
+
+
+
+.grid-container2{
+    display: flex;
+   justify-content: space-between;
+   flex-direction: row-reverse;
+}
+
+.container{
+
+    width:5050px;
+    display: flex;
+    margin-right:auto;
+    /*flex-direction: right;*/
+    justify-content: space-between;
+    padding-right: 10px; 
+    float: right;
+    margin-bottom: 10%;
+    
+}
+
+/*form{
+    width: fit-content;
+    margin-right: auto;
+    min-height:50hv;
+    display: flex;
+    flex-direction:column;
+    align-items:right;
+    justify-content:center;
+
+   } */
+
+.container2{
+        /*display: inline-block;*/
+        width: 400px;  
+        height: fit-content;
+        margin-left: auto; 
+        padding: 100px;
+        justify-content: space-between; 
+        grid-row:auto;
+        align-items:center;
+        padding:50px;
+        flex-direction: row;
+        column-width: auto;
+        float:left;
+        text-align: center;
+    }
+
+    
+
+.red-mark{
+        color: red
+        
+}
+
+
+h4{
+    text-align:left;
+    font-family:'Montserrat', sans-serif;
+    flex-direction:row;
+}
+
+
+h2{
+    text-align: center;
+    font-family:'Montserrat', sans-serif;
+}
+  
+p{
+    text-align: center;
+    font-family:'Montserrat', sans-serif;}
+
+    
+    #btnEnviar{
+        border: none;
+        width: 150px; 
+        height: 50px; 
+        font-size: 20px;
+        padding: 10px 20px;
+        align-items: center;
+        display:flex;
+        justify-content: center;
+
+}
+
+    #btnLimpiar{
+    border: none;
+    width: 150px; 
+    height: 50px; 
+    font-size: 20px;
+    padding: 10px 20px;
+   /* margin-right:100%;*/
+    align-items: center;
+    display:flex;
+    justify-content: center;
+}
+
+
+@media only screen and (min-width: 1200px) {
+    body {
+      margin-right: 15rem;
+      margin-left: 15rem;
+    }
+   };
+   
