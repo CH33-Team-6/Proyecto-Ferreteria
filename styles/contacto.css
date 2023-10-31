@@ -107,10 +107,13 @@ p{
 }
 
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (max-width: 1200px) {
     body {
       margin-right: 15rem;
       margin-left: 15rem;
+    }
+    .grid-container2{
+        flex-direction: column;
     }
    };
    
