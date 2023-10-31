@@ -71,22 +71,22 @@ btnEnviar.addEventListener("click", function(event){
     }
     //cambiar luego el correo de to_name: ferreteria.elpreciojusto@gmail.com
     if(isValid === true && isInputNumber){
-    // emailjs.send("service_pft62sp","template_4eazygj",{
-    //     "to_name": "liliasalazarjst@gmail.com",
-    //     "from_name": inputNombre.value,
-    //     "message": `
-    //     Número de teléfono: ${inputNumber.value}.\n
-    //     ${inputText.value}`,
-    //     "reply_to": inputEmail.value,
-    //     });
-    console.log({
-            "to_name": "liliasalazarjst@gmail.com",
-            "from_name": inputNombre.value,
-            "message": `
-            Número de teléfono: ${inputNumber.value}.\n
-            ${inputText.value}`,
-            "reply_to": inputEmail.value,
-            })
+    emailjs.send("service_pft62sp","template_4eazygj",{
+        "to_name": "liliasalazarjst@gmail.com",
+        "from_name": inputNombre.value,
+        "message": `
+        Número de teléfono: ${inputNumber.value}.\n
+        ${inputText.value}`,
+        "reply_to": inputEmail.value,
+        });
+    // console.log({
+    //         "to_name": "liliasalazarjst@gmail.com",
+    //         "from_name": inputNombre.value,
+    //         "message": `
+    //         Número de teléfono: ${inputNumber.value}.\n
+    //         ${inputText.value}`,
+    //         "reply_to": inputEmail.value,
+    //         })
     alert("mensaje enviado ✅");
     clearForm();
 
