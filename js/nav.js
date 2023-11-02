@@ -31,8 +31,8 @@ ul.insertAdjacentHTML("afterbegin", `<li class="nav-item dropdown">
 <ul class="dropdown-menu">
 <li><a class="dropdown-menu" href="#">Ferreteria</a></li>
 <ul>  <li><a class="dropdown-item" href="./productos.html">Ver ferreteria</a></li>
-<li><a class="dropdown-item" href="./nosotras.html">Accesorios</a></li>
+<li><a class="dropdown-item" href="">Accesorios</a></li>
     <ul>`);
 ul.insertAdjacentHTML("beforeend",`<li class="nav-item">
-    <a class="nav-link" aria-current="page" href="#">Equipo de desarrollo</a>
+    <a class="nav-link" aria-current="page" href="./nosotras.html">Equipo de desarrollo</a>
 </li>`);
