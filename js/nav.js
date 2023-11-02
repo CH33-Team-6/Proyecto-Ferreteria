@@ -2,10 +2,12 @@ const navbar = document.querySelector("#nav");
 
 const div = document.createElement("div");
 const a = document.createElement("a");
-
+const li = document.createElement("li");
 
 div.className = "container-fluid";
 navbar.prepend(div);
+li.className= "nav-item";
+
 a.className = "navbar-brand";
 a.href = "#";
 a.href = "./index.html"
@@ -31,3 +33,6 @@ ul.insertAdjacentHTML("afterbegin", `<li class="nav-item dropdown">
 <ul>  <li><a class="dropdown-item" href="./productos.html">Ver ferreteria</a></li>
 <li><a class="dropdown-item" href="./nosotras.html">Accesorios</a></li>
     <ul>`);
+ul.insertAdjacentHTML("beforeend",`<li class="nav-item">
+    <a class="nav-link" aria-current="page" href="#">Equipo de desarrollo</a>
+</li>`);
