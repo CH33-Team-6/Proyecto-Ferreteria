@@ -36,3 +36,7 @@ ul.insertAdjacentHTML("afterbegin", `<li class="nav-item dropdown">
 ul.insertAdjacentHTML("beforeend",`<li class="nav-item">
     <a class="nav-link" aria-current="page" href="./nosotras.html">Equipo de desarrollo</a>
 </li>`);
+ul.insertAdjacentHTML("beforeend",`<li class="nav-item">
+    <a class="nav-link" aria-current="page" href="#">Nuestra Historia</a>
+</li>`);
+
