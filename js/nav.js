@@ -30,4 +30,8 @@ ul.insertAdjacentHTML("afterbegin", `<li class="nav-item dropdown">
 <li><a class="dropdown-menu" href="#">Ferreteria</a></li>
 <ul>  <li><a class="dropdown-item" href="./productos.html">Ver ferreteria</a></li>
 <li><a class="dropdown-item" href="./nosotras.html">Accesorios</a></li>
-    <ul>`);
+<ul>`);
+ul.insertAdjacentHTML("beforeend",`<li class="nav-item">
+    <a class="nav-link" aria-current="page" href="#">Nuestra Historia</a>
+</li>`);
+
