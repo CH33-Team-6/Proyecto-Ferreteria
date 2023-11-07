@@ -61,7 +61,6 @@ btnEnviar.addEventListener("click", function(event){
         inputEmail.style.border="solid thin red";
         isValid = false;
     }//inputEmail
-    
     if(!isInputNumber){
         validarNumber.innerHTML = "El campo <strong>Número</strong> es requerido.";
         validarNumber.style.display = "block";
@@ -69,6 +68,12 @@ btnEnviar.addEventListener("click", function(event){
         inputNumber.style.border="solid thin red";
         isValid = false;
     }
+    if(inputText.value.length < MIN_DIGITS){
+        inputText.style.border="solid thin red";
+        isValid = false;
+    }//inputMensaje
+
+
     //cambiar luego el correo de to_name: ferreteria.elpreciojusto@gmail.com
     if(isValid === true && isInputNumber){
     emailjs.send("service_pft62sp","template_4eazygj",{
