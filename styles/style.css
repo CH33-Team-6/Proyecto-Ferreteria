@@ -3,6 +3,10 @@
     padding: 0;
   }
   body {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  main{
     margin-right: 5%;
     margin-left: 5%;
   }
