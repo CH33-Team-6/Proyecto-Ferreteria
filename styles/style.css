@@ -7,8 +7,6 @@
     margin-left: 0;
   }
   main{
-    margin-right: 5%;
-    margin-left: 5%;
     border-top: solid 7px #3135A0;
     font-family: 'Montserrat', sans-serif;
   }
@@ -80,7 +78,17 @@ color:#C10F19;
 text-align: center;
 }
 .row {
+  margin-right: 5%;
+  margin-left: 5%;
   justify-content: space-between;
+}
+
+@media (max-width: 576px) {
+  .row{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  }  
 }
 
  
