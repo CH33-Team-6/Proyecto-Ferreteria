@@ -9,6 +9,8 @@
   main{
     margin-right: 5%;
     margin-left: 5%;
+    border-top: solid 7px #3135A0;
+    font-family: 'Montserrat', sans-serif;
   }
   .navbar{
     border-bottom: solid 7px #C10F19;
@@ -77,4 +79,8 @@ h1{
 color:#C10F19;
 text-align: center;
 }
+.row {
+  justify-content: space-between;
+}
+
  

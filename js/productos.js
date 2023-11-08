@@ -1,12 +1,12 @@
 function addItem(item){
-    const itemHTML = `<div class="card" style="width: 18rem; object-fit:contain; height:100%;padding:1rem;"onmouseover="this.style.backgroundColor='#D9D9D9'"onmouseout="this.style.backgroundColor='transparent'"> 
-           <img src= " ${item.img}  " class="card-img-top" alt="image">\n 
-           <div class="card-body" style="text-align:center; color:#C10F19;"; >\n 
-               <h5 class="card-title">$${item.precio}</h5>\n 
-              <p class="card-text">${item.nombre}</p>\n 
-                <a href="#" class="btn btn-primary">Agregar</a>\n 
-            </div>\n 
-        </div>\n 
+    const itemHTML = `<div class="card" style="width: 18rem; object-fit:contain; height:100%; padding:1rem; margin-bottom: 12px;"onmouseover="this.style.backgroundColor='#D9D9D9'"onmouseout="this.style.backgroundColor='transparent'"> 
+           <img src= " ${item.img}  " class="card-img-top" alt="image">
+           <div class="card-body" style="text-align:center; "> 
+               <h5 class="card-title" style="color:#C10F19;">$${item.precio}</h5>
+              <p class="card-text">${item.nombre}.00</p>
+                <a href="#" class="btn btn-primary">Agregar al carrito</a>
+            </div>
+        </div>
         <br/>`;
     const itemsContainer = document.getElementById("list-items");
     itemsContainer.innerHTML += itemHTML;
