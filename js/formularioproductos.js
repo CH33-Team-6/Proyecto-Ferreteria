@@ -76,8 +76,7 @@ btnAgregar.addEventListener("click", function(event){
     
   }//inputDescripcion
   // agregar imagen a imgBB
-  // const input = document.getElementById('imageInput');
-  // const image = document.getElementById('uploadedImage');
+  
   let img = "";
   if (cargarImagen.files.length > 0) {
     const file = cargarImagen.files[0];
