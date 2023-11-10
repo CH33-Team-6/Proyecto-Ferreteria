@@ -1,34 +1,78 @@
 const formularioProductos= document.getElementById("formularioProductos");
-    formularioProductos.insertAdjacentHTML("afterbegin",`
-    <div class="input-group mb-3">
-      <input type="file" class="form-control" id="inputGroupFile02">
-      <label class="input-group-text" for="inputGroupFile02">Upload</label>
-    </div>
-    
-    <div class="input-group mb-3">
-      <span class="input-group-text" id="inputGroup-sizing-default">Nombre del producto</span>
-      <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-    </div>
-    
-    <div class="input-group mb-3">
-      <span class="input-group-text" id="inputGroup-sizing-default">Categoría</span>
-      <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-    </div>
-    <div class="input-group mb-3">
-      <span class="input-group-text" id="inputGroup-sizing-default">Id del producto</span>
-      <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-    </div>
-    
-    <div class="input-group mb-3">
-      <span class="input-group-text" id="inputGroup-sizing-default">Descripción</span>
-      <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-    </div>
-    
-    <div class="input-group mb-3">
-      <span class="input-group-text">$</span>
-      <span class="input-group-text">0.00</span>
-      <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
-    </div>
-    <button type="button" class="btn btn-danger" style="display: flex; align-items: center;">Agregar</button>
-    </div>`)
+   
+const cargarImagen = document.getElementById("inputGroupFile02");
+let cargarImagenvalue = cargarImagen.value;
+let extension = cargarImagenvalue.substring(cargarImagenvalue.lastIndexOf(".")+1).toLowerCase();
+
+const btnAgregar = document.getElementById("btnAgregar");
+const alertValidaciones = document.getElementById("invalid")
+const inputNombre = document.getElementById("inputNombre")
+const inputCategoria = document.getElementById("inputCategoria")
+const inputId = document.getElementById("inputId")
+const inputDescripcion = document.getElementById("inputDescripcion")
+const inputPrecio = document.getElementById("inputPrecio")
+
+btnAgregar.addEventListener("click", function(event){
+  let isValid =true;
+  event.preventDefault();
+  alertValidaciones.style.display="none";
+  cargarImagen.style.border="";
+
+  if(cargarImagen.files.length==0){
+    alertValidaciones.innerHTML="Todos los campos deben de estar llenos";
+    alertValidaciones.style.display="block";
+    cargarImagen.style.border="solid thin red";
+    alertValidaciones.style.color="red";
+    isValid = false; 
+
+  }//cargarImagen
+
+   if(inputNombre.value.length<3){
+   alertValidaciones.innerHTML="Todos los campos deben de estar llenos";
+  alertValidaciones.style.display="block";
+  inputNombre.style.border="solid thin red";
+  alertValidaciones.style.color="red";
+   isValid = false; 
+
+ }//inputNombre
+
+ if(inputCategoria.value.length<3){
+  alertValidaciones.innerHTML="Todos los campos deben de estar llenos";
+ alertValidaciones.style.display="block";
+ inputCategoria.style.border="solid thin red";
+ alertValidaciones.style.color="red";
+  isValid = false; 
+
+}//inputCategoria
+
+if(inputId.value.length<3){
+  alertValidaciones.innerHTML="Todos los campos deben de estar llenos";
+ alertValidaciones.style.display="block";
+ inputId.style.border="solid thin red";
+ alertValidaciones.style.color="red";
+  isValid = false; 
+
+}//inputId
+
+if(inputDescripcion.value.length<3){
+  alertValidaciones.innerHTML="Todos los campos deben de estar llenos";
+ alertValidaciones.style.display="block";
+ inputDescripcion.style.border="solid thin red";
+ alertValidaciones.style.color="red";
+  isValid = false; 
+
+}//inputDescripcion
+
+if(inputPrecio.value.length<1){
+  alertValidaciones.innerHTML="Todos los campos deben de estar llenos";
+ alertValidaciones.style.display="block";
+ inputPrecio.style.border="solid thin red";
+ alertValidaciones.style.color="red";
+  isValid = false; 
+
+}//inputDescripcion
+
+})
+
+
 
