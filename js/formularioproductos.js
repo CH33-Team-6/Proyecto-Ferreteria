@@ -1,3 +1,5 @@
+import { PRODUCTOS } from "./arrayProductos.js";
+
 const formularioProductos= document.getElementById("formularioProductos");
 
 const cargarImagen = document.getElementById("inputGroupFile02");
@@ -20,7 +22,7 @@ btnAgregar.addEventListener("click", function(event){
   alertValidaciones.style.display="none";
   cargarImagen.style.border="";
   
-  if(cargarImagen.files.length==0){
+  if(cargarImagen.files.length == 0){
     alertValidaciones.innerHTML="Todos los campos deben de estar llenos";
     alertValidaciones.style.display="block";
     cargarImagen.style.border="solid thin red";
@@ -73,33 +75,73 @@ btnAgregar.addEventListener("click", function(event){
     isValid = false; 
     
   }//inputDescripcion
-  
-  const pahtml = `<p> Id: ${inputId.value} </p> 
-  <p> Nombre: ${inputNombre.value} </p>
-  <p> Precio: ${inputPrecio.value} </p>
-  <p> Categoria: ${inputCategoria.value} </p>
-  <p> Descripción: ${inputDescripcion.value} </p>
-  <p> Imágen: ${cargarImagen.value} </p>`
-  
-  const elemento = {
-    id: inputId.value,
-    nombre: inputNombre.value,
-    img: cargarImagen.value,
-    precio: inputPrecio.value,
-    descripcion: inputDescripcion.value, 
-    categoria: inputCategoria.value
-  }
-  
-  datos.push(elemento);
-  localStorage.setItem("datos", JSON.stringify(datos));
-  productosAgregados.insertAdjacentHTML("beforeend", pahtml)
+  // agregar imagen a imgBB
+  // const input = document.getElementById('imageInput');
+  // const image = document.getElementById('uploadedImage');
+  let img = "";
+  if (cargarImagen.files.length > 0) {
+    const file = cargarImagen.files[0];
+    const formData = new FormData();
+    formData.append('image', file);
+    console.log({cargarImagen})
+    console.log({formData})
+    
+    fetch('https://api.imgbb.com/1/upload?key=1d621c661bda048835063260b6cd5344', {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log(data);
+    if (data.success) {
+      
+      // Muestra la imagen subida
+      img = data.data.url;
+      console.log(img, "hola");
+      
+      const pahtml = `<p> Id: ${inputId.value} </p> 
+      <p> Nombre: ${inputNombre.value} </p>
+      <p> Precio: ${inputPrecio.value} </p>
+      <p> Categoria: ${inputCategoria.value} </p>
+      <p> Descripción: ${inputDescripcion.value} </p>
+      <p> Imágen: ${img} </p>`
+      
+      console.log('img antes de guardar', img)
+      const elemento = {
+        id: inputId.value,
+        nombre: inputNombre.value,
+        img,
+        precio: inputPrecio.value,
+        descripcion: inputDescripcion.value, 
+        categoria: inputCategoria.value
+      }
+      
+      datos.push(elemento);
+      localStorage.setItem("datos", JSON.stringify(datos));
+      productosAgregados.insertAdjacentHTML("beforeend", pahtml)
+    } else {
+      console.error('Error al subir la imagen:', data.error.message);
+    }
+  })
+  .catch(error => console.error('Error en la solicitud:', error));
+} else {
+  console.error('Por favor, selecciona una imagen.');
+}
+//imgBB
+
+// limpiar campos
+
+// inputId.value = ""
+// inputNombre.value = ""
+// inputPrecio.value = ""
+// inputCategoria.value = ""
+// inputDescripcion.value = ""
 })//addEventListener
 
 window.addEventListener("load", function(event){
   
   if (localStorage.getItem("datos") !== null){
     datos = JSON.parse(localStorage.getItem("datos"));
-    console.log(datos)
     datos.forEach((r) => {
       // r de registro
       let pahtml = `<p> Id: ${r.id} </p> 
@@ -112,8 +154,12 @@ window.addEventListener("load", function(event){
     });//forEach
     
   }//datos!=null
-  
+  if (localStorage.getItem("datos") === null){
+    localStorage.setItem("datos", JSON.stringify(PRODUCTOS));  
+    console.log("SDFD");
+  }//datos=null
 });//load event
+
 
 
 
