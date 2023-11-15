@@ -17,6 +17,13 @@
    flex-direction: row-reverse;
    border-top: solid 7px #3136a0;
 }
+.grid-container2 h5{
+    margin-top: 100px
+}
+
+.grid-cointainer2 h2{
+    margin-top: 10px;
+}
 
 .container{
     display: flex;
@@ -102,6 +109,7 @@ p{
     align-items: center;
     display:flex;
     justify-content: center;
+    margin
 }
 a{
     text-decoration: none;
