@@ -16,6 +16,34 @@ const inputDescripcion = document.getElementById("inputDescripcion")
 const inputPrecio = document.getElementById("inputPrecio")
 let datos = [];
 
+inputId.addEventListener("input", function(e) {
+  let valor = inputId.value;
+  valor = valor.replace(/[^0-9]/g, "");
+  inputId.value = valor;
+}); // permitir solamente numeros en el campo número.
+inputPrecio.addEventListener("input", function(e) {
+  let valor = inputPrecio.value;
+  valor = valor.replace(/[^0-9]/g, "");
+  inputPrecio.value = valor;
+}); // permitir solamente numeros en el campo número.
+
+function numerosConsecutivos()  {
+  let patronConsecutivo = /^(?!(\d)\1{4})\d{5}$/;
+
+  // Agregar mensajes de depuración
+  console.log("Valor de inputId:", inputId.value);
+  console.log(!patronConsecutivo.test(inputId.value));
+  if (patronConsecutivo.test(inputId.value) || patronConsecutivo.test(inputPrecio.value)) {
+    return true; // Puedes permitir que el formulario se envíe
+  }else {
+    inputId.value = "";
+    inputPrecio.value = "";
+    alert("El número no puede tener todos los dígitos consecutivos.");
+    clearForm();
+    return false;
+  }
+}
+
 btnAgregar.addEventListener("click", function(event){
   let isValid =true;
   event.preventDefault();
@@ -24,6 +52,7 @@ btnAgregar.addEventListener("click", function(event){
   
   if(cargarImagen.files.length == 0){
     alertValidaciones.innerHTML="Todos los campos deben de estar llenos";
+    alertValidaciones.innerHTML="Por favor cargue una imágen de tipo jpg, jpeg o png";
     alertValidaciones.style.display="block";
     cargarImagen.style.border="solid thin red";
     alertValidaciones.style.color="red";
@@ -31,8 +60,9 @@ btnAgregar.addEventListener("click", function(event){
     
   }//cargarImagen
   
-  if(inputNombre.value.length<3){
+  if(inputNombre.value.length < 3){
     alertValidaciones.innerHTML="Todos los campos deben de estar llenos";
+    alertValidaciones.innerHTML="Por favor agregue un nombre válido";
     alertValidaciones.style.display="block";
     inputNombre.style.border="solid thin red";
     alertValidaciones.style.color="red";
@@ -40,16 +70,17 @@ btnAgregar.addEventListener("click", function(event){
     
   }//inputNombre
   
-  if(inputCategoria.value.length<3){
+  if(inputCategoria.value === ""){
     alertValidaciones.innerHTML="Todos los campos deben de estar llenos";
+    alertValidaciones.innerHTML="Seleccione una categoría";
     alertValidaciones.style.display="block";
     inputCategoria.style.border="solid thin red";
     alertValidaciones.style.color="red";
-    isValid = false; 
-    
+    isValid = false;
   }//inputCategoria
   
-  if(inputId.value.length<3){
+  if(inputId.value.length < 3 || !numerosConsecutivos()){
+    
     alertValidaciones.innerHTML="Todos los campos deben de estar llenos";
     alertValidaciones.style.display="block";
     inputId.style.border="solid thin red";
@@ -58,8 +89,8 @@ btnAgregar.addEventListener("click", function(event){
     
   }//inputId
   
-  if(inputDescripcion.value.length<3){
-    alertValidaciones.innerHTML="Todos los campos deben de estar llenos";
+  if(inputDescripcion.value.length < 8){
+    alertValidaciones.innerHTML="Todos los campos deben de estar llenos, asegúrate de llenar la descripción correctamente.";
     alertValidaciones.style.display="block";
     inputDescripcion.style.border="solid thin red";
     alertValidaciones.style.color="red";
@@ -67,7 +98,7 @@ btnAgregar.addEventListener("click", function(event){
     
   }//inputDescripcion
   
-  if(inputPrecio.value.length<1){
+  if(inputPrecio.value.length < 1){
     alertValidaciones.innerHTML="Todos los campos deben de estar llenos";
     alertValidaciones.style.display="block";
     inputPrecio.style.border="solid thin red";
@@ -77,55 +108,53 @@ btnAgregar.addEventListener("click", function(event){
   }//inputDescripcion
   // agregar imagen a imgBB
   
-  let img = "";
-  if (cargarImagen.files.length > 0) {
-    const file = cargarImagen.files[0];
-    const formData = new FormData();
-    formData.append('image', file);
-    console.log({cargarImagen})
-    console.log({formData})
+//   let img = "";
+//   if (cargarImagen.files.length > 0) {
+//     const file = cargarImagen.files[0];
+//     const formData = new FormData();
+//     formData.append('image', file);
     
-    fetch('https://api.imgbb.com/1/upload?key=1d621c661bda048835063260b6cd5344', {
-    method: 'POST',
-    body: formData
-  })
-  .then(response => response.json())
-  .then(data => {
-    console.log(data);
-    if (data.success) {
+//     fetch('https://api.imgbb.com/1/upload?key=1d621c661bda048835063260b6cd5344', {
+//     method: 'POST',
+//     body: formData
+//   })
+//   .then(response => response.json())
+//   .then(data => {
+//     console.log(data);
+//     if (data.success) {
       
-      // Muestra la imagen subida
-      img = data.data.url;
-      console.log(img, "hola");
+//       // Muestra la imagen subida
+//       img = data.data.url;
+//       console.log(img, "hola");
       
-      const pahtml = `<p> Id: ${inputId.value} </p> 
-      <p> Nombre: ${inputNombre.value} </p>
-      <p> Precio: ${inputPrecio.value} </p>
-      <p> Categoria: ${inputCategoria.value} </p>
-      <p> Descripción: ${inputDescripcion.value} </p>
-      <p> Imágen: ${img} </p>`
+//       const pahtml = `<p> Id: ${inputId.value} </p> 
+//       <p> Nombre: ${inputNombre.value} </p>
+//       <p> Precio: ${inputPrecio.value} </p>
+//       <p> Categoria: ${inputCategoria.value} </p>
+//       <p> Descripción: ${inputDescripcion.value} </p>
+//       <p> Imágen: ${img} </p>`
       
-      console.log('img antes de guardar', img)
-      const elemento = {
-        id: inputId.value,
-        nombre: inputNombre.value,
-        img,
-        precio: inputPrecio.value,
-        descripcion: inputDescripcion.value, 
-        categoria: inputCategoria.value
-      }
+//       console.log('img antes de guardar', img)
+//       const elemento = {
+//         id: inputId.value,
+//         nombre: inputNombre.value,
+//         img,
+//         precio: inputPrecio.value,
+//         descripcion: inputDescripcion.value, 
+//         categoria: inputCategoria.value
+//       }
       
-      datos.push(elemento);
-      localStorage.setItem("datos", JSON.stringify(datos));
-      productosAgregados.insertAdjacentHTML("beforeend", pahtml)
-    } else {
-      console.error('Error al subir la imagen:', data.error.message);
-    }
-  })
-  .catch(error => console.error('Error en la solicitud:', error));
-} else {
-  console.error('Por favor, selecciona una imagen.');
-}
+//       datos.push(elemento);
+//       localStorage.setItem("datos", JSON.stringify(datos));
+//       productosAgregados.insertAdjacentHTML("beforeend", pahtml)
+//     } else {
+//       console.error('Error al subir la imagen:', data.error.message);
+//     }
+//   })
+//   .catch(error => console.error('Error en la solicitud:', error));
+// } else {
+//   console.error('Por favor, selecciona una imagen.');
+// }
 //imgBB
 
 // limpiar campos
@@ -135,6 +164,9 @@ btnAgregar.addEventListener("click", function(event){
 // inputPrecio.value = ""
 // inputCategoria.value = ""
 // inputDescripcion.value = ""
+if (isValid) {
+  alert("Producto agregado con éxito")
+}
 })//addEventListener
 
 window.addEventListener("load", function(event){

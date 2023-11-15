@@ -82,6 +82,10 @@ text-align: center;
   margin-left: 5%;
   justify-content: space-between;
 }
+/* formulario productos */
+#formularioProductos{
+  margin: 5% 15%;
+}
 
 @media (max-width: 576px) {
   .row{
