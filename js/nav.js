@@ -24,7 +24,7 @@ const ul = document.createElement("ul");
 div.appendChild(div2);
 div2.appendChild(ul);
 ul.className = "navbar-nav me-auto mb-2 mb-lg-0";
-ul.style.gap = "5rem";
+
 ul.insertAdjacentHTML("afterbegin", `<li class="nav-item dropdown">
 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  Productos
