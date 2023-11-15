@@ -43,7 +43,7 @@ ul.insertAdjacentHTML("beforeend",`<li class="nav-item">
     <a class="nav-link" aria-current="page" href="./nosotras.html">Equipo de desarrollo</a>
 </li>`);
 div2.insertAdjacentHTML("beforeend",`    <div class="icon-nav">
-<a href="#" class="nav-link"><i class="fa-regular fa-circle-user fa-lg" style="color: #3135A0;"></i></a>
+<a href="./registrodeusuarios.html" class="nav-link"><i class="fa-regular fa-circle-user fa-lg" style="color: #3135A0;"></i></a>
 </div>
 <div class="icon-nav">
 <a href="#" class="nav-link"><i class="fa-solid fa-cart-shopping fa-flip-horizontal fa-lg" style="color: #3135a0;"></i></a>
