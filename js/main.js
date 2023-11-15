@@ -1,6 +1,6 @@
 const inputNombre = document.getElementById("Name");//nombre
 const inputAsunto = document.getElementById("Asunto");//asunto
-const inputEmail = document.getElementById("Email");
+const inputEmail = document.getElementById("email");
 const inputNumber = document.querySelector("#Number");
 const inputText = document.querySelector("#Mensaje");
 const btnEnviar = document.getElementById("btnEnviar");//botón de enviar 
@@ -11,9 +11,12 @@ const validarNombre = document.getElementById("invalid-name");
 const validarAsunto = document.getElementById("invalid-subject");
 const validarEmail = document.getElementById("invalid-email");
 const validarNumber = document.getElementById("invalid-number");
+const validarText = document.getElementById("invalid-number");
 
 const PHONE_DIGITS = 10;
-const MIN_DIGITS = 3;    
+const MIN_DIGITS = 3;   
+const MAX_DIGITS = 100;
+const MIN_MENSAJE = 1;
 
 function isNumber(value) {
     if (value.length !== PHONE_DIGITS || isNaN(value) ){
@@ -22,10 +25,19 @@ function isNumber(value) {
     return true;
 }//validar número de telefóno
 
+function numerosConsecutivos(){
+    let reget = /^(?!(\d)\1{4})/;
+    if (!reget.test(inputNumber.value)){
+        alert("El número no puede tener los dígitos consecutivos")
+        return false;
+    }else{
+        return true;
+    }
+}
 
 inputNumber.addEventListener("input", function(e) {
     let valor = inputNumber.value;
-    valor = valor.replace(/[^0-9]/g, "");
+    valor = valor.replace(/[^0-9]/g,"");
     inputNumber.value = valor;
 }); // permitir solamente numeros en el campo número.
 
@@ -61,14 +73,17 @@ btnEnviar.addEventListener("click", function(event){
         inputEmail.style.border="solid thin red";
         isValid = false;
     }//inputEmail
-    if(!isInputNumber){
+    if(!isInputNumber || !numerosConsecutivos()){
         validarNumber.innerHTML = "El campo <strong>Número</strong> es requerido.";
         validarNumber.style.display = "block";
         validarNumber.style.color = "red";
         inputNumber.style.border="solid thin red";
         isValid = false;
-    }
-    if(inputText.value.length < MIN_DIGITS){
+    }//inputNumber
+    if(inputText.value.length < MIN_MENSAJE){
+        validarText.innerHTML = "El campo <strong>Teléfono</strong> es requerido.";
+        validarText.style.display = "block";
+        validarText.style.color = "red";
         inputText.style.border="solid thin red";
         isValid = false;
     }//inputMensaje
