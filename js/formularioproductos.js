@@ -72,8 +72,7 @@ btnAgregar.addEventListener("click", function(event){
   inputPrecio.style.border = "";
   
   if(cargarImagen.files.length === 0){
-    alertValidaciones.innerHTML = "Todos los campos deben de estar llenos";
-    alertValidaciones.innerHTML = "Por favor cargue una imágen de tipo jpg, jpeg o png";
+    alertValidaciones.innerHTML = "Todos los campos deben de estar llenos. Por favor seleccione una imágen de tipo jpg, jpeg o png.";
     alertValidaciones.style.display = "block";
     cargarImagen.style.border = "solid thin red";
     alertValidaciones.style.color = "red";
@@ -81,8 +80,8 @@ btnAgregar.addEventListener("click", function(event){
     
   }//cargarImagen
   
-  if(inputNombre.value.length < 3){
-    alertValidaciones.innerHTML = "Todos los campos deben de estar llenos";
+  if(inputNombre.value.length < 5){
+    alertValidaciones.innerHTML = "Todos los campos deben de estar llenos, el nombre es importante para localizar el artículo asegúrese de colocarlo adecuadamente.";
     alertValidaciones.innerHTML = "Por favor agregue un nombre válido";
     alertValidaciones.style.display = "block";
     inputNombre.style.border = "solid thin red";
@@ -92,7 +91,7 @@ btnAgregar.addEventListener("click", function(event){
   }//inputNombre
   
   if(inputCategoria.value === ""){
-    alertValidaciones.innerHTML = "Todos los campos deben de estar llenos";
+    alertValidaciones.innerHTML = "Todos los campos deben de estar llenos, seleccione la categoría a la que pertenece el artículo.";
     alertValidaciones.innerHTML = "Seleccione una categoría";
     alertValidaciones.style.display = "block";
     inputCategoria.style.border = "solid thin red";
@@ -102,7 +101,7 @@ btnAgregar.addEventListener("click", function(event){
   
   if(inputId.value.length < 3){
     
-    alertValidaciones.innerHTML = "Todos los campos deben de estar llenos";
+    alertValidaciones.innerHTML = "Todos los campos deben de estar llenos, verifique que el ID sea el adecuado.";
     alertValidaciones.style.display = "block";
     inputId.style.border = "solid thin red";
     alertValidaciones.style.color = "red";
@@ -110,8 +109,8 @@ btnAgregar.addEventListener("click", function(event){
     
   }//inputId
   
-  if(inputDescripcion.value.length < 8){
-    alertValidaciones.innerHTML = "Todos los campos deben de estar llenos, asegúrate de llenar la descripción correctamente.";
+  if(inputDescripcion.value.length < 10){
+    alertValidaciones.innerHTML = "Todos los campos deben de estar llenos, asegúrese de llenar la descripción correctamente.";
     alertValidaciones.style.display = "block";
     inputDescripcion.style.border = "solid thin red";
     alertValidaciones.style.color = "red";
@@ -120,7 +119,7 @@ btnAgregar.addEventListener("click", function(event){
   }//inputDescripcion
   
   if(inputPrecio.value.length < 1){
-    alertValidaciones.innerHTML = "Todos los campos deben de estar llenos";
+    alertValidaciones.innerHTML = "Todos los campos deben de estar llenos, asegúrese de que el precio en pesos corresponde al artículo y no agregue .00 ni signo de pesos.";
     alertValidaciones.style.display = "block";
     inputPrecio.style.border = "solid thin red";
     alertValidaciones.style.color = "red";

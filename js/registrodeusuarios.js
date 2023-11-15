@@ -13,7 +13,11 @@
         let isValid = true;
         event.preventDefault();
         alertValidaciones.style.display="none";
-        
+        nombreElement.style.border="";
+        telefonoElement.style.border="";
+        emailElement.style.border ="";
+        contraseñaElement.style.border = "";
+        conContraseñaElement.style.border = "";
         
         if (nombreElement.value.length < 10) {
           
