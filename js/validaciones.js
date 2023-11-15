@@ -2,9 +2,10 @@
 
 
 
-function validar (email) {
-    const correo = new RegExp("[A-Za-z0-9]{3}@.[a-z]{2}");
-    return correo.test(email)
-}
 
-console.log(validarCorreo("asd@.com"));
+const emailRegex = /^\S+@\S+\.\S+$/;
+if (!emailRegex.test(inputEmail.value.trim())) {
+    validarEmail.textContent = "Por favor, ingrese un correo electrónico válido.";
+    return;
+}
+console.log(validar("asd@.com"));
