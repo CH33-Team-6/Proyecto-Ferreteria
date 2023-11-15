@@ -108,64 +108,64 @@ btnAgregar.addEventListener("click", function(event){
   }//inputDescripcion
   // agregar imagen a imgBB
   
-//   let img = "";
-//   if (cargarImagen.files.length > 0) {
-//     const file = cargarImagen.files[0];
-//     const formData = new FormData();
-//     formData.append('image', file);
+  let img = "";
+  if (cargarImagen.files.length > 0) {
+    const file = cargarImagen.files[0];
+    const formData = new FormData();
+    formData.append('image', file);
     
-//     fetch('https://api.imgbb.com/1/upload?key=1d621c661bda048835063260b6cd5344', {
-//     method: 'POST',
-//     body: formData
-//   })
-//   .then(response => response.json())
-//   .then(data => {
-//     console.log(data);
-//     if (data.success) {
+    fetch('https://api.imgbb.com/1/upload?key=1d621c661bda048835063260b6cd5344', {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log(data);
+    if (data.success) {
       
-//       // Muestra la imagen subida
-//       img = data.data.url;
-//       console.log(img, "hola");
+      // Muestra la imagen subida
+      img = data.data.url;
+      console.log(img, "hola");
       
-//       const pahtml = `<p> Id: ${inputId.value} </p> 
-//       <p> Nombre: ${inputNombre.value} </p>
-//       <p> Precio: ${inputPrecio.value} </p>
-//       <p> Categoria: ${inputCategoria.value} </p>
-//       <p> Descripción: ${inputDescripcion.value} </p>
-//       <p> Imágen: ${img} </p>`
+      const pahtml = `<p> Id: ${inputId.value} </p> 
+      <p> Nombre: ${inputNombre.value} </p>
+      <p> Precio: ${inputPrecio.value} </p>
+      <p> Categoria: ${inputCategoria.value} </p>
+      <p> Descripción: ${inputDescripcion.value} </p>
+      <p> Imágen: ${img} </p>`
       
-//       console.log('img antes de guardar', img)
-//       const elemento = {
-//         id: inputId.value,
-//         nombre: inputNombre.value,
-//         img,
-//         precio: inputPrecio.value,
-//         descripcion: inputDescripcion.value, 
-//         categoria: inputCategoria.value
-//       }
+      console.log('img antes de guardar', img)
+      const elemento = {
+        id: inputId.value,
+        nombre: inputNombre.value,
+        img,
+        precio: inputPrecio.value,
+        descripcion: inputDescripcion.value, 
+        categoria: inputCategoria.value
+      }
       
-//       datos.push(elemento);
-//       localStorage.setItem("datos", JSON.stringify(datos));
-//       productosAgregados.insertAdjacentHTML("beforeend", pahtml)
-//     } else {
-//       console.error('Error al subir la imagen:', data.error.message);
-//     }
-//   })
-//   .catch(error => console.error('Error en la solicitud:', error));
-// } else {
-//   console.error('Por favor, selecciona una imagen.');
-// }
-//imgBB
-
-// limpiar campos
-
-// inputId.value = ""
-// inputNombre.value = ""
-// inputPrecio.value = ""
-// inputCategoria.value = ""
-// inputDescripcion.value = ""
+      datos.push(elemento);
+      localStorage.setItem("datos", JSON.stringify(datos));
+      productosAgregados.insertAdjacentHTML("beforeend", pahtml)
+    } else {
+      console.error('Error al subir la imagen:', data.error.message);
+    }
+  })
+  .catch(error => console.error('Error en la solicitud:', error));
+} else {
+  console.error('Por favor, selecciona una imagen.');
+}
+// imgBB
 if (isValid) {
   alert("Producto agregado con éxito")
+  
+  // limpiar campos
+  
+  inputId.value = ""
+  inputNombre.value = ""
+  inputPrecio.value = ""
+  inputCategoria.value = ""
+  inputDescripcion.value = ""
 }
 })//addEventListener
 
