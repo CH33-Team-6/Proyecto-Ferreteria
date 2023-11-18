@@ -1,6 +1,7 @@
 const btnEnviar = document.querySelector(`#btnEnviar`);
 
 btnEnviar.addEventListener("click", function(event){
+    event.preventDefault();
     const emailElement = document.getElementById('exampleInputEmail1');
     const contraseñaElement = document.getElementById('exampleInputPassword1'); 
     const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
