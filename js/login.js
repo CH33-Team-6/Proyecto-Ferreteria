@@ -1,21 +1,19 @@
+const btnEnviar = document.querySelector(`#btnEnviar`);
 
+btnEnviar.addEventListener("click", function(event){
+    const emailElement = document.getElementById('exampleInputEmail1');
+    const contraseñaElement = document.getElementById('exampleInputPassword1'); 
+    const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+    
+    const validUser = usuarios.find(user => user.usuario === emailElement.value && user.contraseña === contraseñaElement.value);
 
-btnEnviar. addEventListener("click", function(event){
-    const correoElement=document.getElementById("exampleInputEmail1").value;
-    const contraseñaElement=document.getElementById("exampleInputPassword1").value;
-    const btnEnviar=document.getElementById("btnEnviar"); 
-    const errorMessage = document.getElementById("errorMessage");
+    console.log(usuarios);
 
-    if (correoElement === "" || contraseñaElement === "") {
-        errorMessage.txtContent = "Por favor, ingrese nombre de usuario y contraseña";
-    } else {
-        const storedUsarname = localStorage.getItem("correoElement");
-        const storedPassword = localStorage.getItem("contraseñaElement");
-
-        if (correoElement === storedUsarname && contraseñaElement === storedPassword) {
-            errorMessage.txtContent = "Inicio de sesión exitoso.";
-        } else {
-            errorMessage.txtContent = "Nombre de usuario y contraseña incorrectos.";
-        }
+    if (!validUser) {
+        return alert("Usuario y/o contraseña incorrectos");
     }
-});//btnEnviar
+    
+    alert(`Bienvenido ${validUser.nombre}`);
+    localStorage.setItem('login_success', JSON.stringify(validUser));
+    window.location.href = "./index.html";
+});
