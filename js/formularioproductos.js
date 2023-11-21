@@ -1,6 +1,11 @@
 import { PRODUCTOS } from "./arrayProductos.js";
 
 const formularioProductos= document.getElementById("formularioProductos");
+  // Captura el cambio en el input de tipo file y actualiza el texto personalizado
+  document.getElementById('inputGroupFile02').addEventListener('change', function () {
+    var fileName = this.files[0].name;
+    document.querySelector('label[for="inputGroupFile02"] span').innerText = fileName;
+});
 
 const cargarImagen = document.getElementById("inputGroupFile02");
 let cargarImagenvalue = cargarImagen.value;
