@@ -101,3 +101,38 @@ text-align: center;
 }
 
 
+/*animacion*/
+
+.construction-card {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  max-width: 300px;
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s, color 0.3s; /* Transiciones suaves */
+  align-content:center;
+  justify-content:center;
+  align-items: center;
+  display:flex,
+}
+
+.construction-card:hover {
+  transform: scale(1.1); /* Zoom al pasar el ratón */
+  color: #ff6347; /* Cambio de color al pasar el ratón */
+}
+
+#titulo{
+  color: #333; /* Color de texto predeterminado */
+  transition: color 0.3s; /* Transición suave de color */
+}
+
+.construction-card:hover h1 {
+  color: #ff6347; /* Cambio de color al pasar el ratón */
+}
+
+#texto{
+  color: #555;
+  font-size: 14px;
+}
