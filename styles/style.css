@@ -19,6 +19,7 @@
   .navbar-nav .nav-link {
     color: #3135A0;
     font-size: 18px;
+    text-align: center;
   }
   /* Cambiar el color del texto del enlace activo */
  .nav-link:hover {
