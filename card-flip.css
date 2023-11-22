@@ -62,7 +62,7 @@ h6 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px; /* Espacio entre las tarjetas */
-  margin: left 20px;
+  margin: left 100px;
   margin-bottom: 0px;
 }
 @media screen and (max-width: 1073px) {
