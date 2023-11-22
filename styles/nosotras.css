@@ -1,3 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+
+
 .nosotras {
     border-top: 7px solid #3135A0 ;
     text-align: center;
@@ -9,7 +20,7 @@
   
   .nosotras.card-body.tarjeta.card::before{
     width:100%;
-    height: 200pxx;
+    height: 200px;
     display: flex;
     color:black;
   }
@@ -147,7 +158,7 @@
 .card:hover {
   transform: translate(-30px) rotateX(10deg) rotateY(-10deg) rotateX(-10deg)rotateY(10deg) scale(1.1);
   box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.7);
-  background-color:#3135A0; /* Cambiar a azul */
+  background-color:#ccc; /* Cambiar a gris claro*/
   
   transform: translateY(-20px)
   
