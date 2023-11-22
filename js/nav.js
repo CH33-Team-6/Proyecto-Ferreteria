@@ -25,20 +25,20 @@ div.appendChild(div2);
 div2.appendChild(ul);
 ul.className = "navbar-nav me-auto mb-2 mb-lg-0";
 
-ul.insertAdjacentHTML("afterbegin", `<li class="nav-item dropdown">
+ul.insertAdjacentHTML("afterbegin", `<li class="nav-item dropdown" >
 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  Productos
 </a> <!--Comienza menú de productos--> 
-<ul class="dropdown-menu">
+<ul class="dropdown-menu" style="text-align: center;">
 <li><a class="dropdown-item" href="./productos.html">Ver ferreteria</a></li>
     </ul>`);
 ul.insertAdjacentHTML("beforeend",`<li class="nav-item">
     <a class="nav-link" aria-current="page" href="./nuestraHistoria.html">Nuestra Historia</a>
 </li>`);
-ul.insertAdjacentHTML("beforeend",` <li class="nav-item">
+ul.insertAdjacentHTML("beforeend",` <li class="nav-item" >
 <a class="nav-link" href="./contacto.html">Contacto</a>
 </li>`);
-ul.insertAdjacentHTML("beforeend",`<li class="nav-item">
+ul.insertAdjacentHTML("beforeend",`<li class="nav-item" >
     <a class="nav-link" aria-current="page" href="./nosotras.html">Equipo de desarrollo</a>
 </li>`);
 div2.insertAdjacentHTML("beforeend",`    <div class="icon-nav">

@@ -62,7 +62,9 @@
         text-align: center;
     }
 
-    
+    .container2 h2{
+        margin: 40px auto;
+    }
 
 .red-mark{
         color: red
