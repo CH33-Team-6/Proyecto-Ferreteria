@@ -68,7 +68,7 @@ btnRegistrarElement.addEventListener('click', function (event) {
     if (isValid) {
       usuarios.push(elemento);
       localStorage.setItem('usuarios', JSON.stringify(usuarios));
-      alert('Bienvenido ' + nombreElement.value);
+    
       window.location.href = './login.html';
     }
     nombreElement.value = '';
