@@ -58,12 +58,13 @@ footer {
   display: flex;
   justify-content: space-around;
   width: 100%;
+  position:relative;
 }
 
 .cardfooter {
   background-color: #3135a0;
   text-align: center;
-  display: inline-block;
+  display: inline;
   max-width: 100%;
   height: auto;
   padding: 20px;

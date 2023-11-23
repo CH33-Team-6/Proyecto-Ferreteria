@@ -12,24 +12,24 @@
   padding: 0;
   box-sizing: border-box;
 }
-/*body{
-    font-family: montserrat, sans-serif;
-    width:100%;
-    min-height:100vh;
-    display:flex;
-    justify-content: center;
-    align-items:center;
-}*/
 
 /*Nosotras*/
+
+section{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  align-content:center;
+}
+
 .nosotras {
   border-top: 7px solid #3135a0;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
   color: #c10f19;
   font-weight: 200;
-  margin-bottom: 90%;
-  position: inherit;
+  margin-bottom:0;
+  position: relative;
 }
 .card-title {
   margin-top: 1.5rem;
@@ -59,24 +59,24 @@ h6 {
   width: 60%;
   height: 20vh;
   margin: 5px;
-  display: grid;
+  display: flex;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px; /* Espacio entre las tarjetas */
-  margin-left: 100px;
-  margin-right: 100px;
-  margin-bottom: 0px;
+  justify-content: center;
+
 }
+/*
 @media screen and (max-width: 1073px) {
   .container-flipcards {
     display: flex;
     flex-direction: column; /* Cambiado a dirección de columna para apilar las tarjetas verticalmente */
-    align-items: center; /* Centrar las tarjetas horizontalmente en pantallas más pequeñas */
-  }
+    /*align-items: center; /* Centrar las tarjetas horizontalmente en pantallas más pequeñas */
+  /*}
 
   .card {
     width: 100%; /* Hacer que las tarjetas ocupen el 100% del ancho disponible */
-    max-width: none; /* Eliminar el ancho máximo establecido anteriormente */
-  }
+ /*   max-width: none; /* Eliminar el ancho máximo establecido anteriormente */
+ /* }
 
   .nosotras {
     margin-bottom: 430%;
@@ -102,6 +102,31 @@ h6 {
     margin-bottom: 1000%;
     position: inherit;
   }
+}*/
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.row {
+  display: flex;
+}
+
+.flip-cards{
+
+  width: 100%;
+  height: 20vh;
+  margin: 5px;
+  display: flex;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px; /* Espacio entre las tarjetas */
+  justify-content: center;
+  flex-wrap:wrap;
 }
 
 /*Las 6 cards*/
