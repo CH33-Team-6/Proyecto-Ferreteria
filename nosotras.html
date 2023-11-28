@@ -232,6 +232,19 @@
         
     </section>
         
+    <script>
+        // Añadir clases en hover para el efecto 3D
+document.querySelectorAll('.card').forEach(card => {
+  card.addEventListener('mouseenter', () => {
+    card.querySelector('.card__inner').classList.add('is-flipped');
+  });
+
+  card.addEventListener('mouseleave', () => {
+    card.querySelector('.card__inner').classList.remove('is-flipped');
+  });
+});
+
+    </script>
     
     <script type="module" src="./js/card.js"></script><!--cardjs-->
     <script type="module" src="./js/nav.js"></script>
