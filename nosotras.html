@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="./styles/style.css">
   <!--<link rel="stylesheet" href="./styles/nosotras.css">-->
   <link rel="stylesheet" href="card-flip.css">
+
   <!-- google fonts Montserrat -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -230,6 +231,17 @@
 
 
     <script src="card.js"></script>
+    <script> 
+    document.querySelectorAll('.card').forEach(card => {
+  card.addEventListener('mouseenter', () => {
+    card.querySelector('.card__inner').classList.add('is-flipped');
+  });
+
+  card.addEventListener('mouseleave', () => {
+    card.querySelector('.card__inner').classList.remove('is-flipped');
+  });
+});
+    </script>
    
     <script type="module" src="./js/nav.js"></script>
     <script src="https://getbootstrap.com/docs/5.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
