@@ -18,6 +18,7 @@
       <i class="fa-regular fa-envelope fa-xl redes-link" style="color: #ffffff;;"></i>
       <i class="fa-brands fa-facebook fa-xl redes-link" style="color: #ffffff;"></i>
       <i class="fa-brands fa-instagram fa-xl redes-link" style="color: #ffffff;"></i>
+      </div>
     </footer>
 
 `);
