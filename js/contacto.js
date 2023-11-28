@@ -5,7 +5,6 @@ const inputNumber = document.querySelector('#Number');
 const inputText = document.querySelector('#Mensaje');
 const btnEnviar = document.getElementById('btnEnviar'); //botón de enviar
 const btnLimpiar = document.getElementById('btnLimpiar');
-let alertValidacionesTexto = document.getElementById('alertValidacionesTexto');
 
 const validarNombre = document.getElementById('invalid-name');
 const validarAsunto = document.getElementById('invalid-subject');

@@ -8,12 +8,12 @@ body {
 }
 main {
   border-top: solid 7px #3135a0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 .navbar {
   border-bottom: solid 7px #c10f19;
   margin-bottom: 4px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
 }
 
@@ -101,5 +101,8 @@ h1 {
   }
   footer {
     flex-direction: column;
+  }
+  .icon-nav {
+    text-align: center;
   }
 }

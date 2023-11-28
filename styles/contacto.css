@@ -1,132 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap');
 
-
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap');
-
-*     {
-        margin: 0;
-        padding: 0;
-      }
-
-
-
-
-.grid-container2{
-    display: flex;
-   justify-content: space-between;
-   flex-direction: row-reverse;
-   border-top: solid 7px #3136a0;
+.grid-container2 {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  border-top: solid 7px #3136a0;
 }
-.grid-container2 h5{
-    margin-top: 100px
+.grid-container2 h5 {
+  margin-top: 100px;
 }
 
-.grid-cointainer2 h2{
-    margin-top: 10px;
+.grid-cointainer2 h2 {
+  margin-top: 10px;
 }
 
-.container{
-    display: flex;
-    margin-right:auto;
-    /*flex-direction: right;*/
-    justify-content: space-between;
-    padding-right: 10px; 
-    float: right;
-    margin-bottom: 10%;
-    
+.container {
+  display: flex;
+  margin-right: auto;
+  /*flex-direction: right;*/
+  justify-content: space-between;
+  padding-right: 10px;
+  float: right;
+  margin-bottom: 10%;
 }
-.num{
-    background-color: transparent;
-    border: none;
-
+.num {
+  background-color: transparent;
+  border: none;
 }
-.num:hover{
-    color: #3136a0;
-    font-weight: 600;
- 
+.num:hover {
+  color: #3136a0;
+  font-weight: 600;
 }
 
-.container2{
-        /*display: inline-block;*/
-        /* width: 400px;   */
-        height: fit-content;
-        margin-left: auto; 
-        padding: 100px;
-        justify-content: space-between; 
-        grid-row:auto;
-        align-items:center;
-        /* padding:50px; */
-        flex-direction: row;
-        column-width: auto;
-        float:left;
-        text-align: center;
-    }
-
-    .container2 h2{
-        margin: 40px auto;
-    }
-
-.red-mark{
-        color: red
-        
+.container2 {
+  /*display: inline-block;*/
+  /* width: 400px;   */
+  height: fit-content;
+  margin-left: auto;
+  padding: 100px;
+  justify-content: space-between;
+  grid-row: auto;
+  align-items: center;
+  /* padding:50px; */
+  flex-direction: row;
+  column-width: auto;
+  float: left;
+  text-align: center;
 }
 
-
-h4{
-    text-align:left;
-    font-family:'Montserrat', sans-serif;
-    flex-direction:row;
+.container2 h2 {
+  margin: 40px auto;
 }
 
-
-h2{
-    text-align: center;
-    font-family:'Montserrat', sans-serif;
+.red-mark {
+  color: red;
 }
-  
-p{
-    text-align: center;
-    font-family:'Montserrat', sans-serif;}
-
-    
-    #btnEnviar{
-        border: none;
-        width: 150px; 
-        height: 50px; 
-        font-size: 20px;
-        padding: 10px 20px;
-        align-items: center;
-        display:flex;
-        justify-content: center;
-
+/* 
+h4 {
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+  flex-direction: row;
 }
 
-    #btnLimpiar{
-    border: none;
-    width: 150px; 
-    height: 50px; 
-    font-size: 20px;
-    padding: 10px 20px;
-   /* margin-right:100%;*/
-    align-items: center;
-    display:flex;
-    justify-content: center;
+h2 {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
 }
-a{
+
+p {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+} */
+
+#btnEnviar {
+  border: none;
+  width: 150px;
+  height: 50px;
+  font-size: 20px;
+  padding: 10px 20px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+#btnLimpiar {
+  border: none;
+  width: 150px;
+  height: 50px;
+  font-size: 20px;
+  padding: 10px 20px;
+  /* margin-right:100%;*/
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+/* a{
     text-decoration: none;
     color: black;
 }
 a:hover{
     color:red;
-}
+} */
 
 @media only screen and (max-width: 1200px) {
-    /* body {
+  /* body {
       margin-right: 15rem;
       margin-left: 15rem;
     } */
-    .grid-container2{
-        flex-direction: column;
-    }
-   };
-   
+  .grid-container2 {
+    flex-direction: column;
+  }
+}
