@@ -16,5 +16,7 @@ btnEnviar.addEventListener("click", function(event){
     
     alert(`Bienvenido ${validUser.nombre}`);
     localStorage.setItem('login_success', JSON.stringify(validUser));
+    localStorage.setItem('sesionActiva', 'true');
+    localStorage.setItem('userName', validUser.nombre);
     window.location.href = "./index.html";
 });

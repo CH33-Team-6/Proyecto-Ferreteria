@@ -49,3 +49,18 @@ div2.insertAdjacentHTML("beforeend",`    <div class="icon-nav">
 </div>
 </div>`);
 
+/*Sesión activa mensaje*/
+document.addEventListener('DOMContentLoaded', function () {
+    const sesionActiva = localStorage.getItem('sesionActiva');
+    const userName = localStorage.getItem('userName');
+  
+    if (sesionActiva === 'true') {
+      // Si hay una sesión activa, muestra el mensaje en el navbar
+      const sesionActivaDiv = document.createElement('div');
+      sesionActivaDiv.className = 'alert alert-success';
+      sesionActivaDiv.innerHTML = `Hola, ${userName}`;
+      document.body.insertBefore(sesionActivaDiv, document.body.firstChild);
+      const navbar = document.getElementById('nav');
+    navbar.insertAdjacentElement('afterend', sesionActivaDiv);
+    }
+  });
