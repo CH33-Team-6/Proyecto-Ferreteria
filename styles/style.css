@@ -5,6 +5,8 @@
 body {
   margin-right: 0;
   margin-left: 0;
+
+  
 }
 main {
   border-top: solid 7px #3135a0;
@@ -78,7 +80,7 @@ footer {
   text-align: center;
 }
 /* Empieza productos.style */
-h1 {
+h3 {
   color: #c10f19;
   text-align: center;
 }
@@ -98,6 +100,55 @@ h1 {
     flex-direction: column;
     align-content: center;
   }
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  max-width: 800px; /* Ajusta el ancho máximo según tus necesidades */
+  margin: auto;
+
+}
+
+.carousel {
+  max-width: 100%; /* Asegúrate de que el carrusel ocupe el 100% del contenedor */
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+}
+
+.button {
+  background-color: #c10f19;
+  color: #3135a0;
+}
+
+.button-vermas {
+  margin-top: 10px; /* Ajusta el valor según sea necesario */
+  text-align: center; 
+}
+
+.incons {
+  display: flex;
+  flex-direction: column; /* Alinea los elementos verticalmente */
+  align-items: center; /* Alinea los elementos horizontalmente */
+  text-align: center;
+}
+
+.incons img {
+  margin: 0 10px; /* Ajusta según sea necesario para dar espacio entre las imágenes y los párrafos */
+}
+
+.incons p {
+  margin: 10px 0; /* Ajusta según sea necesario para dar espacio entre los párrafos y las imágenes */
+}
+p {
+  color: #3135a0;
+  font-size:smaller;
 }
 
 
