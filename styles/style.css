@@ -1,10 +1,10 @@
 * {
   margin: 0;
-  padding: 0;
+  padding: 0; 
 }
 body {
   margin-right: 0;
-  margin-left: 0;
+  margin-left: 0; 
 
   
 }
@@ -80,7 +80,7 @@ footer {
   text-align: center;
 }
 /* Empieza productos.style */
-h3 {
+h3, h5{
   color: #c10f19;
   text-align: center;
 }
@@ -108,19 +108,11 @@ main {
 }
 
 .container {
-  max-width: 800px; /* Ajusta el ancho máximo según tus necesidades */
-  margin: auto;
+ max-width: 800px; 
+  margin: auto; 
 
 }
 
-.carousel {
-  max-width: 100%; /* Asegúrate de que el carrusel ocupe el 100% del contenedor */
-}
-
-.carousel-item img {
-  width: 100%;
-  height: auto;
-}
 
 .button {
   background-color: #c10f19;
@@ -128,27 +120,80 @@ main {
 }
 
 .button-vermas {
-  margin-top: 10px; /* Ajusta el valor según sea necesario */
+  margin-top: 10px; 
   text-align: center; 
 }
 
 .incons {
   display: flex;
-  flex-direction: column; /* Alinea los elementos verticalmente */
-  align-items: center; /* Alinea los elementos horizontalmente */
-  text-align: center;
+  flex-direction: column; 
+  align-items: center; 
+  text-align: center; 
 }
 
 .incons img {
-  margin: 0 10px; /* Ajusta según sea necesario para dar espacio entre las imágenes y los párrafos */
+   margin: 0 10px; 
 }
 
 .incons p {
-  margin: 10px 0; /* Ajusta según sea necesario para dar espacio entre los párrafos y las imágenes */
+  margin: 10px 0; 
 }
-p {
+.dos {
   color: #3135a0;
   font-size:smaller;
+  font-family: 'Montserrat', sans-serif;
 }
+
+.uno {
+  animation: zoom 5s infinite;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.p {
+  font-family: 'Montserrat', sans-serif;
+  color: #3135a0;
+}
+
+.img:hover {
+  opacity: 0.5;
+}
+.flecha {
+  background-color: #c10f19;
+}
+
+.carousel-inner{
+  width: 500px;
+  overflow: hidden;
+  
+}
+
+@keyframes rotateIn {
+  from {
+    opacity: 0;
+    transform: rotate(-45deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+}
+
+.tarjeta:hover {
+  animation: rotateIn 1s ease-in-out;
+}
+
+
+
+
 
 
