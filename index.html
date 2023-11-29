@@ -13,8 +13,7 @@
       crossorigin="anonymous"
     />
     <!-- css styles -->
-    <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="stylesheet" href="./styles/contacto.css" />
+    <link rel="stylesheet" href="./styles/style.css">
     <!-- google fonts Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -35,11 +34,95 @@
       </nav>
     </header>
     <main class="grid-container">
-      <h1>PRINCIPAL</h1>
-      <div class="construction-card">
-        <h1 id="titulo">Página en Construcción</h1>
-        <p id="text0">Estamos trabajando en algo increíble. ¡Vuelve pronto!</p>
+      <br>
+     
+     
+      <!-- /*inicio de carrusel productos estrella*/ -->
+      <h3>¡Nuestros Productos Estrella!</h3>
+      <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img src="./assets/img-productos/PRODUCTOS/134 CARRETILLA TRUPER KIDS.jpg" class="d-block  img" style="max-height:500px" alt="...">
+            <br>
+            <br>
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Carretilla Truper</h3>
+              <p class="p">Capacidad máx 580kg.</p>
+            </div>
+          </div>
+          
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="./assets/img-productos/PRODUCTOS/025 NAVAJA RETRÁCTIL TRUPER 18 mm.jpg" class="d-block img" style="max-height:500px" alt="...">
+            <br>
+            <br>
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Navaja retráctil Truper</h3>
+              <p class="p">Acero aleado 6 pulgadas.</p>
+            </div>
+          </div>
+          
+          <div class="carousel-item">
+            <img src="./assets/img-productos/PRODUCTOS/057 LLAVE PARA TUBO STILSON 12.jpg" class="d-block img" style="max-height:500px" alt="...">
+            <br>
+            <br>
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Llave para tubo Stilson</h3>
+              <p class="p">Mordazas ajustables forjadas en acero al carbono.</p>
+            </div>
+          </div>
+          
+        </div>
+        <section class="button-vermas">
+          <div>
+            <a class="btn btn-primary" href="./productos.html" style="background-color:#3135a0;" role="button">Ver más</a>
+          </div>
+        </section>
+        <br>
+        <br>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon flecha" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+          <span class="carousel-control-next-icon flecha" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
+      <!-- /*finaliza de carrusel productos estrella*/ -->
+       <!-- /*Inician los descuentos*/ -->
+      <section>
+        <h3>¡Nuestros Descuentos!</h3>
+        <br>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="card1 tarjeta">
+              <img src="./assets/img/FerreDescuentos (2).png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Regulares</h5>
+                <p class="card-text">Encientra promociones regulares en nuestras redes sociales.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card1 tarjeta">
+              <img src="./assets/img/FerreDescuentos (1).png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Buen Fin</h5>
+                <p class="card-text">Nuestros descuentos de el buen fin los puedes encontrar en Noviembre.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card1 tarjeta">
+              <img src="./assets/img/FerreDescuentos.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Navideños</h5>
+                <p class="card-text">Puedes encontrar descuentos o rifas en las fechas decembrinas.</p>
+              </div>
+            </div>
+          </div>
+      </section>
+    
 
       <div class="right">
         <img
@@ -53,6 +136,16 @@
       </div>
       <!--BTN WHATSAPP-->
     </main>
+        <br>
+        <br>
+        <figure class="incons">
+          <img class="uno" src="./assets/img/icons8-entrega-64.png" alt="">
+          <p class="dos">Envíos</p>
+          <img class="uno" src="./assets/img/icons8-tarjeta-aceptada-64.png" alt="">
+          <p class="dos" >Aceptamos diferentes formas de pagos</p>
+          <img class="uno" src="./assets/img/icons8-seguridad-64.png" alt="">
+          <p class="dos">Compras seguras</p>
+        </figure>
 
     <footer id="footer"></footer>
     <script type="module" src="./js/footer.js"></script>
