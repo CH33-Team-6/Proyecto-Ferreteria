@@ -12,11 +12,17 @@ footer.insertAdjacentHTML(
       <p class="card-text">Lunes a Viernes:</br> 8:00a.m.-8:00p.m.<br>
         Sábado:</br> 8:00p.m.-5:00p.m.</p>
     </div>
-    <div class = "cardfooter">
-      <h4 class="card-title redes-links">Redes Sociales</h4><hr>
-      <i class="fa-regular fa-envelope fa-xl redes-link" style="color: #ffffff;;"></i>
-      <i class="fa-brands fa-facebook fa-xl redes-link" style="color: #ffffff;"></i>
-      <i class="fa-brands fa-instagram fa-xl redes-link" style="color: #ffffff;"></i>
-    </div>
+    <div class="cardfooter" id="redes-sociales">
+  <h4 class="card-title redes-links">Redes Sociales</h4><hr>
+  <a href="contacto.html"target="_blank">
+  <i class="fa-regular fa-envelope fa-xl redes-link" style="color: #ffffff;"></i>
+  </a>
+  <a href="https://www.facebook.com/materialesdeconstruccionelpreciojusto/?locale=es_LA"target="_blank">
+  <i class="fa-brands fa-facebook fa-xl redes-link" style="color: #ffffff;"></i>
+  </a>
+  <a href="https://maps.app.goo.gl/uH5wSGNaLeERkgdw7"target="_blank">
+  <i class="fa-solid fa-location-dot redes-link" style="color:#ffffff;"></i>
+  </a>
+</div>
     `,
 );

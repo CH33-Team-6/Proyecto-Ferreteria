@@ -184,23 +184,6 @@
     font-weight: 900;
     text-transform: uppercase;
     text-align: center;
-<<<<<<< HEAD
-}
-.card__body{
-    padding:20px;
-}
-.card__body h3{
-    color:var(--dark);
-    font-weight:600;
-    margin-bottom:15px;
-}
-.card__body{
-    color:var(--dark);
-    font-size:12px;
-    line-height:1.5;
-}
-
-=======
   }
   .card__body {
     padding: 20px;
@@ -215,7 +198,7 @@
     font-size: 12px;
     line-height: 1.5;
   }
->>>>>>> 4ad69baa77041c23babda9eeac95b7814af5bc95
+
 
 /*animaciones agregadas recientemente*/
 .card:hover {
@@ -234,26 +217,6 @@
     color:var(--primary); /* Rojo */
   }
 
-<<<<<<< HEAD
-=======
-/*animaciones agregadas recientemente*/
-.card:hover {
-    transform: scale(1.05);
-    background-color: #ccc;
-  }
-  
-  .card:hover {
-    cursor: pointer;
-  }
-  
-  
-  /* Efecto de aumento de tamaño e iluminación en rojo en los iconos de LinkedIn y GitHub */
-  .dev-icon:hover {
-    transform: scale(1.2);
-    color:var(--primary); /* Rojo */
-  }
-
->>>>>>> 4ad69baa77041c23babda9eeac95b7814af5bc95
  
 .dev-icon:hover {
     transform: scale(1.2);
@@ -265,12 +228,8 @@
   }
   
   .dev-icon {
-<<<<<<< HEAD
-    font-size: 30px; 
-=======
-    font-size: 30px;
->>>>>>> 4ad69baa77041c23babda9eeac95b7814af5bc95
-    margin:5px;
+    font-size: 25px; 
+    margin:3px;
   }
   
   .card__body h3,
@@ -306,11 +265,7 @@
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
                  0 0 20px rgba(255, 255, 255, 0.8),
                  0 0 30px rgba(255, 255, 255, 0.8);
-<<<<<<< HEAD
-                 transform: scale(1.9);
-=======
                  transform: scale(1.6);
->>>>>>> 4ad69baa77041c23babda9eeac95b7814af5bc95
   }
   
 
@@ -323,40 +278,4 @@
   backface-visibility: hidden;
 }
 
-<<<<<<< HEAD
-.card__body .pp {
-    position: relative;
-  }
   
-  .card__body .pp::before,
-  .card__body .pp::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px; /* Grosor de las líneas */
-    background-color: rgba(255, 255, 255, 0.5); /* Color y opacidad de las líneas */
-    top: 50%;
-    transform-origin: 50% 50%;
-    animation: rotateLines 5s linear infinite; /* Ajusta la duración según sea necesario */
-  }
-  
-  .card__body .pp::before {
-    transform: rotate(45deg);
-  }
-  
-  .card__body .pp::after {
-    transform: rotate(-45deg);
-  }
-  
-  @keyframes rotateLines {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-  
-  
-=======
->>>>>>> 4ad69baa77041c23babda9eeac95b7814af5bc95
