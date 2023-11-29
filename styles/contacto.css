@@ -82,6 +82,8 @@ p {
   align-items: center;
   display: flex;
   justify-content: center;
+  background-color:#3136a0;
+  color: #fff;
 }
 
 #btnLimpiar {
@@ -94,6 +96,8 @@ p {
   align-items: center;
   display: flex;
   justify-content: center;
+  background-color:#3136a0;
+  color: #fff;
 }
 /* a{
     text-decoration: none;
@@ -111,4 +115,9 @@ a:hover{
   .grid-container2 {
     flex-direction: column;
   }
+}
+.centrar{
+  display: flex;
+  justify-content: space-between;
+  margin: 60px;
 }
