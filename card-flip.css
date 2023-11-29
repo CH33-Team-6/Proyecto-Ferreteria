@@ -228,8 +228,8 @@
   }
   
   .dev-icon {
-    font-size: 30px;
-    margin:5px;
+    font-size: 25px; 
+    margin:3px;
   }
   
   .card__body h3,
@@ -278,3 +278,4 @@
   backface-visibility: hidden;
 }
 
+  
