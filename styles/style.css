@@ -1,10 +1,12 @@
 * {
   margin: 0;
-  padding: 0;
+  padding: 0; 
 }
 body {
   margin-right: 0;
-  margin-left: 0;
+  margin-left: 0; 
+
+  
 }
 main {
   border-top: solid 7px #3135a0;
@@ -88,7 +90,7 @@ footer {
   text-align: center;
 }
 /* Empieza productos.style */
-h1 {
+h3, h5{
   color: #c10f19;
   text-align: center;
 }
@@ -125,6 +127,100 @@ h1 {
   font-size: 25px;
   cursor: pointer;
 }
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+ max-width: 800px; 
+  margin: auto; 
+
+}
+
+
+.button {
+  background-color: #c10f19;
+  color: #3135a0;
+}
+
+.button-vermas {
+  margin-top: 10px; 
+  text-align: center; 
+}
+
+.incons {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  text-align: center; 
+}
+
+.incons img {
+   margin: 0 10px; 
+}
+
+.incons p {
+  margin: 10px 0; 
+}
+.dos {
+  color: #3135a0;
+  font-size:smaller;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.uno {
+  animation: zoom 5s infinite;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.p {
+  font-family: 'Montserrat', sans-serif;
+  color: #3135a0;
+}
+
+.img:hover {
+  opacity: 0.5;
+}
+.flecha {
+  background-color: #c10f19;
+}
+
+.carousel-inner{
+  width: 500px;
+  overflow: hidden;
+  
+}
+
+@keyframes rotateIn {
+  from {
+    opacity: 0;
+    transform: rotate(-45deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+}
+
+.tarjeta:hover {
+  animation: rotateIn 1s ease-in-out;
+}
+
+
+
+
 
 .redes-link:hover {
   transform: translateY(-5px);
