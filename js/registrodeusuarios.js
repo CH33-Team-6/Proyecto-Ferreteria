@@ -5,10 +5,9 @@ const contraseñaElement = document.getElementById('exampleInputPassword1');
 const conContraseñaElement = document.getElementById('exampleInputPassword2');
 const btnRegistrarElement = document.getElementById('examenpleBtnAgregar');
 const alertValidaciones = document.getElementById('alertValidaciones');
-const alert = document.getElementById('alert-red');
-
+const alertElement = document.getElementById('alert-red'); // Cambié el nombre de la variable
 let usuarios = [];
-alert.style.display = 'none';
+alertElement.style.display = 'none';
 
 btnRegistrarElement.addEventListener('click', function (event) {
   event.preventDefault();
@@ -48,11 +47,12 @@ btnRegistrarElement.addEventListener('click', function (event) {
   }
 
   if (contraseñaElement.value !== conContraseñaElement.value) {
+    alertElement.style.display = 'block'; 
     alert('Las contraseñas no coinciden.');
     isValid = false;
   }
   if (errores.length > 0) {
-    alert.style.display = 'block';
+    alertElement.style.display = 'block';
     alertValidaciones.innerHTML = ''; // Limpiar mensajes anteriores
 
     for (let error of errores) {
@@ -68,8 +68,12 @@ btnRegistrarElement.addEventListener('click', function (event) {
     if (isValid) {
       usuarios.push(elemento);
       localStorage.setItem('usuarios', JSON.stringify(usuarios));
-    
+
+      document.getElementById('alerta-enviado').style.display = 'block';
+    setTimeout(function() {
+      document.getElementById('alerta-enviado').style.display = 'none';
       window.location.href = './login.html';
+    }, 5000);
     }
     nombreElement.value = '';
     telefonoElement.value = '';

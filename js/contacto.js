@@ -105,7 +105,10 @@ btnEnviar.addEventListener('click', function (event) {
     //         ${inputText.value}`,
     //         "reply_to": inputEmail.value,
     //         })
-    alert('mensaje enviado ✅');
+    document.getElementById('alerta-enviado').style.display = 'block';
+    setTimeout(function() {
+      document.getElementById('alerta-enviado').style.display = 'none';
+    }, 5000);
     clearForm();
   }
 });
