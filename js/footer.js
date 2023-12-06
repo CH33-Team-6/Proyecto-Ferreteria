@@ -1,6 +1,6 @@
-const footer = document.getElementById('footer');
+const footer = document.getElementById("footer");
 footer.insertAdjacentHTML(
-  'afterbegin',
+  "afterbegin",
   `
     <div class="cardfooter"> 
       <h4 class="card-title">Nuestras Sucursales</h4><hr>
@@ -14,15 +14,17 @@ footer.insertAdjacentHTML(
     </div>
     <div class="cardfooter" id="redes-sociales">
   <h4 class="card-title redes-links">Redes Sociales</h4><hr>
-  <a href="contacto.html"target="_blank">
-  <i class="fa-regular fa-envelope fa-xl redes-link" style="color: #ffffff;"></i>
-  </a>
-  <a href="https://www.facebook.com/materialesdeconstruccionelpreciojusto/?locale=es_LA"target="_blank">
-  <i class="fa-brands fa-facebook fa-xl redes-link" style="color: #ffffff;"></i>
-  </a>
-  <a href="https://maps.app.goo.gl/uH5wSGNaLeERkgdw7"target="_blank">
-  <i class="fa-solid fa-location-dot redes-link" style="color:#ffffff;"></i>
-  </a>
+  <div class="social-icons">
+    <a href="contacto.html"target="_blank">
+    <i class="fa-regular fa-envelope fa-xl redes-link" style="color: #ffffff;"></i>
+    </a>
+    <a href="https://www.facebook.com/materialesdeconstruccionelpreciojusto/?locale=es_LA"target="_blank">
+    <i class="fa-brands fa-facebook fa-xl redes-link" style="color: #ffffff;"></i>
+    </a>
+    <a href="https://maps.app.goo.gl/uH5wSGNaLeERkgdw7"target="_blank">
+    <i class="fa-solid fa-location-dot redes-link" style="color:#ffffff;"></i>
+    </a>
+  </div>
 </div>
-    `,
+    `
 );

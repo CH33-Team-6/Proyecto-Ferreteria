@@ -36,7 +36,12 @@
     </header>
     <main class="grid-container2">
       <div class="container">
-        <div id="alerta-enviado" class="alert alert-success" role="alert" style="display:none;">
+        <div
+          id="alerta-enviado"
+          class="alert alert-success"
+          role="alert"
+          style="display: none"
+        >
           Mensaje enviado ✅
         </div>
         <form>
@@ -92,7 +97,7 @@
               type="text"
               class="form-control"
               id="Number"
-              placeholder="10 dígitos sin comas ni guiones"
+              placeholder="9559811779"
               maxlength="10"
               required
             />
@@ -104,67 +109,71 @@
               type="textarea"
               class="form-control"
               id="Mensaje"
-              placeholder="Escribe aquí"
+              placeholder="Escribe aquí tu mensaje"
               value=""
               required
               cols="30"
               rows="10"
             ></textarea>
           </div>
-        <div class="centrar">
-          <button
-            type="button"
-            id="btnEnviar"
-            class="btn btn-primary btn-lg btn-block"
-          >
-            Enviar
-          </button>
-          <br />
-          <button
-            type="button"
-            id="btnLimpiar"
-            class="btn btn-primary btn-lg btn-block"
-          >
-            Limpiar
-          </button>
-        </div>
+          <div class="centrar">
+            <button
+              type="button"
+              id="btnEnviar"
+              class="btn btn-primary btn-lg btn-block"
+            >
+              Enviar
+            </button>
+            <br />
+            <button
+              type="button"
+              id="btnLimpiar"
+              class="btn btn-primary btn-lg btn-block"
+            >
+              Limpiar
+            </button>
+          </div>
         </form>
         <!--termina el formulario-->
       </div>
 
       <div class="container2">
         <h2>¿Tienes alguna duda con tu compra?</h2>
-        <h4>Manda un mensaje a la sucursal en donde realizaste tu compra</h4><br>
-        <p><strong>Sucursal San Antonio</strong></p>
+        <h5>Manda un mensaje a la sucursal en donde realizaste tu compra</h5>
+        <br />
+        <h6><strong>Sucursal San Antonio</strong></h6>
 
         <button
           class="num"
           alt="Whatsapp"
           onclick="window.location.href='https://wa.me/+528130391674?text=Hola!%20Estoy%20interesado%20en%20tu%20servicio'"
         >
-          <i class="fa-brands fa-whatsapp fa-lg" style="color: #00000f"></i>
+          <i class="fa-brands fa-whatsapp fa-lg" style="color: #198754"></i>
           8130391674
         </button>
         <br />
         <br />
-        <p><strong>Sucursal Higueras</strong></p>
+        <h6><strong>Sucursal Higueras</strong></h6>
         <button
           class="num"
           alt="Whatsapp"
           onclick="window.location.href='https://wa.me/+528115565307?text=Hola!%20Estoy%20interesado%20en%20tu%20servicio'"
         >
-          <i class="fa-brands fa-whatsapp fa-lg" style="color: #00000f"></i>
+          <i class="fa-brands fa-whatsapp fa-lg" style="color: #198754"></i>
           8115565307
         </button>
         <!--Linkeado el mail :3-->
         <br />
         <br />
-        <p>Si deseas localizar la tienda más cercana a tu domicilio da click</p>
-        <a
-          href="https://www.google.com.mx/maps/search/Ferreter%C3%ADa+el+Precio+Justo/@25.6188871,-100.1528407,14z/data=!3m1!4b1?entry=ttu"
-          target="_blank"
-          >aquí</a
-        >
+        <p>
+          Si deseas localizar la tienda más cercana a tu domicilio da click
+          <a
+            href="https://www.google.com.mx/maps/search/Ferreter%C3%ADa+el+Precio+Justo/@25.6188871,-100.1528407,14z/data=!3m1!4b1?entry=ttu"
+            target="_blank"
+            >aquí</a
+          >
+          .
+        </p>
       </div>
     </main>
 
