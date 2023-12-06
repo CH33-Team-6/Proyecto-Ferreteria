@@ -159,6 +159,40 @@ main {
 .carousel {
   margin-top: 2rem;
 }
+/* ... Otros estilos ... */
+
+.carousel {
+  margin-top: 2rem;
+  overflow: hidden; /* Asegura que el contenido no se desborde del carrusel */
+}
+
+.carousel-inner {
+  width: 100%;
+}
+
+.carousel-item img {
+  max-width: 100%; 
+  height: auto; 
+}
+
+@media (max-width: 768px) {
+  .carousel-caption {
+    display: none; 
+  }
+}
+
+/* ... Otros estilos ... */
+
+
+
+
+
+
+
+
+
+
+
 .descuentos {
   margin-top: 4rem;
 }
