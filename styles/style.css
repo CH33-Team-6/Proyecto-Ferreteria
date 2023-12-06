@@ -1,12 +1,10 @@
 * {
   margin: 0;
-  padding: 0; 
+  padding: 0;
 }
 body {
   margin-right: 0;
-  margin-left: 0; 
-
-  
+  margin-left: 0;
 }
 main {
   border-top: solid 7px #3135a0;
@@ -90,7 +88,8 @@ footer {
   text-align: center;
 }
 /* Empieza productos.style */
-h3, h5{
+h3,
+h5 {
   color: #c10f19;
   text-align: center;
 }
@@ -116,6 +115,10 @@ h3, h5{
   .icon-nav {
     text-align: center;
   }
+  .incons {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 /*Estilo agregado recientemente*/
@@ -134,11 +137,9 @@ main {
 }
 
 .container {
- max-width: 800px; 
-  margin: auto; 
-
+  max-width: 800px;
+  margin: auto;
 }
-
 
 .button {
   background-color: #c10f19;
@@ -146,28 +147,39 @@ main {
 }
 
 .button-vermas {
-  margin-top: 10px; 
-  text-align: center; 
+  margin-top: 10px;
+  text-align: center;
+}
+.carousel {
+  margin-top: 2rem;
+}
+.descuentos {
+  margin-top: 4rem;
+}
+.card-text {
+  font-family: "Montserrat", sans-serif;
+  color: #3135a0;
+  margin: 1rem;
+  text-align: center;
 }
 
 .incons {
   display: flex;
-  flex-direction: column; 
-  align-items: center; 
-  text-align: center; 
+  justify-content: space-around;
+  text-align: center;
 }
 
 .incons img {
-   margin: 0 10px; 
+  margin: 0 10px;
 }
 
 .incons p {
-  margin: 10px 0; 
+  margin: 10px 0;
 }
 .dos {
   color: #3135a0;
-  font-size:smaller;
-  font-family: 'Montserrat', sans-serif;
+  font-size: smaller;
+  font-family: "Montserrat", sans-serif;
 }
 
 .uno {
@@ -186,7 +198,7 @@ main {
   }
 }
 .p {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #3135a0;
 }
 
@@ -197,10 +209,9 @@ main {
   background-color: #c10f19;
 }
 
-.carousel-inner{
-  width: 500px;
+.carousel-inner {
+  width: 100%;
   overflow: hidden;
-  
 }
 
 @keyframes rotateIn {
@@ -217,10 +228,6 @@ main {
 .tarjeta:hover {
   animation: rotateIn 1s ease-in-out;
 }
-
-
-
-
 
 .redes-link:hover {
   transform: translateY(-5px);
