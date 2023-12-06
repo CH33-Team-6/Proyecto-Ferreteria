@@ -34,7 +34,7 @@
   height: fit-content;
   margin-left: auto;
   padding: 100px;
-  justify-content: space-between;
+  justify-content: center;
   grid-row: auto;
   align-items: center;
   /* padding:50px; */
@@ -42,6 +42,7 @@
   column-width: auto;
   float: left;
   text-align: center;
+  margin-top: -23%;
 }
 
 .container2 h2 {
@@ -129,3 +130,4 @@ a:hover{
   z-index: 1000;
   font-size: 20px;
 }
+
